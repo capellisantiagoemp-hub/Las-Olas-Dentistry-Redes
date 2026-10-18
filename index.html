@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propuesta de redes sociales | Las Olas Dentistry</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a1c33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1c33; --navy-2:#12304f; --navy-3:#1c4068;
+  --cream:#f3eee5; --cream-2:#e9e2d4; --paper:#fbfaf7;
+  --ink:#0a1c33; --mute:#46546a; --line:rgba(10,28,51,.14);
+  --on-navy:#f6f2ea; --on-navy-dim:rgba(246,242,234,.74);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --r:20px; --gutter:clamp(18px,4.4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{width:min(1240px,100% - var(--gutter)*2);margin-inline:auto}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--navy-3);outline-offset:3px}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(246,242,234,.12)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.brand img{height:56px;width:auto}
+.steps{display:flex;gap:4px}
+.steps a{font-size:13px;font-weight:500;text-decoration:none;color:var(--on-navy-dim);padding:10px 16px;border-radius:99px;transition:background .2s var(--ease),color .2s var(--ease)}
+.steps a b{font-weight:600;margin-right:8px;color:var(--on-navy)}
+.steps a.on{background:rgba(246,242,234,.12);color:var(--on-navy)}
+.right{display:flex;align-items:center;gap:12px}
+.lang{display:inline-flex;border:1px solid rgba(246,242,234,.3);border-radius:99px;padding:3px}
+.lang button{background:none;border:0;cursor:pointer;font-size:12.5px;font-weight:600;letter-spacing:.08em;padding:8px 14px;border-radius:99px;color:var(--on-navy-dim);min-height:36px;transition:background .2s var(--ease),color .2s var(--ease),transform .16s var(--ease)}
+.lang button[aria-pressed="true"]{background:var(--on-navy);color:var(--navy)}
+.lang button:active{transform:scale(.96)}
+@media (hover:hover) and (pointer:fine){
+  .steps a:hover{background:rgba(246,242,234,.1);color:var(--on-navy)}
+  .lang button[aria-pressed="false"]:hover{color:var(--on-navy)}
+}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--cream) 0%,var(--cream-2) 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(40px,6vw,72px) 0 clamp(44px,6vw,80px)}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--navy-3)}
+.hero h1{font-size:clamp(46px,7.2vw,98px);line-height:.96;margin:18px 0 22px;text-wrap:balance}
+.hero h1 em{font-style:italic;padding-bottom:.08em;display:inline-block}
+.hero p.lead{font-size:clamp(17px,1.8vw,20px);color:var(--mute);max-width:44ch}
+.for{margin-top:24px;font-size:15px;color:var(--mute)}
+.for b{color:var(--ink);font-weight:600}
+.path{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:640px}
+.path a{display:block;text-decoration:none;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);background:rgba(251,250,247,.6);transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .22s}
+.path a:active{transform:scale(.97)}
+.path small{display:block;font-size:12px;letter-spacing:.14em;color:var(--navy-3);font-weight:600}
+.path span{display:block;margin-top:4px;font-weight:500;font-size:15px;line-height:1.3}
+@media (hover:hover) and (pointer:fine){.path a:hover{transform:translateY(-3px);background:var(--paper);box-shadow:0 18px 36px -22px rgba(10,28,51,.5)}}
+.collage{position:relative;min-height:clamp(380px,46vw,600px)}
+.arch{position:absolute;right:0;top:0;width:78%;aspect-ratio:4/5;border-radius:999px 999px var(--r) var(--r);overflow:hidden;background:var(--navy);box-shadow:0 40px 80px -40px rgba(10,28,51,.6)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+.disc{position:absolute;left:0;bottom:2%;width:46%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--cream);background:var(--navy);box-shadow:0 30px 60px -30px rgba(10,28,51,.6)}
+.disc img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+
+/* sections */
+section.blk{padding:clamp(64px,9vw,120px) 0}
+#hoy{background:var(--paper)}
+#propuesta{background:var(--cream)}
+#material{background:var(--paper)}
+.sec-head{max-width:760px;margin-bottom:clamp(30px,5vw,56px)}
+.sec-head .eyebrow{display:block;margin-bottom:12px}
+.sec-head h2{font-size:clamp(36px,5.4vw,64px);line-height:1;text-wrap:balance}
+.sec-head p{margin-top:16px;color:var(--mute);max-width:56ch;font-size:clamp(16px,1.6vw,18px)}
+
+/* hoy */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:clamp(28px,4vw,48px)}
+.stat{padding:24px 22px 24px 0}
+.stat + .stat{padding-left:22px;border-left:1px solid var(--line)}
+.stat b{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(44px,5.4vw,72px);line-height:1}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--mute);line-height:1.35;max-width:22ch}
+.now{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.9fr);gap:clamp(16px,2.4vw,32px);align-items:start}
+.shot{margin:0}
+.shot .win{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 30px 60px -40px rgba(10,28,51,.55);cursor:zoom-in;transition:transform .3s var(--ease),box-shadow .3s var(--ease);display:block;width:100%;padding:0}
+.shot .win:active{transform:scale(.985)}
+.shot .win img{width:100%;height:auto}
+@media (hover:hover) and (pointer:fine){.shot .win:hover{transform:translateY(-6px);box-shadow:0 40px 70px -36px rgba(10,28,51,.6)}}
+.shot figcaption{padding:16px 4px 0;display:grid;gap:4px}
+.shot figcaption b{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--navy-3)}
+.shot figcaption span{font-size:16px;line-height:1.4}
+.shot figcaption small{font-size:13.5px;color:var(--mute)}
+.fbcard{border-radius:var(--r);background:var(--navy);color:var(--on-navy);padding:clamp(24px,3vw,36px);display:grid;gap:14px;align-self:stretch;align-content:start}
+.fbcard h3{font-size:clamp(30px,3vw,40px);line-height:1.02}
+.fbcard p{color:var(--on-navy-dim);font-size:15.5px}
+.fbcard .num{font-family:"Cormorant Garamond",serif;font-size:56px;font-weight:600;line-height:1}
+.fbcard hr{border:0;border-top:1px solid rgba(246,242,234,.18)}
+
+/* propuesta */
+.stage{display:grid;grid-template-columns:1fr minmax(320px,520px) 1fr;gap:clamp(24px,4vw,64px);align-items:center}
+.notes{display:grid;gap:34px}
+.note{max-width:300px}
+.notes.r .note{margin-left:auto}
+.note h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:28px;line-height:1.05;margin-bottom:8px}
+.note p{font-size:15px;color:var(--mute);line-height:1.5}
+.phone{position:relative;border-radius:clamp(44px,12vw,64px);padding:clamp(9px,2.6vw,13px);background:linear-gradient(145deg,#1d2c40,#05090f 60%);box-shadow:0 50px 90px -40px rgba(10,28,51,.8),0 0 0 1.5px rgba(10,28,51,.25);cursor:zoom-in;transition:transform .35s var(--ease);-webkit-tap-highlight-color:transparent;max-width:520px;margin-inline:auto;width:100%}
+.phone:active{transform:scale(.99)}
+.phone .screen{border-radius:clamp(34px,9.6vw,52px);overflow:hidden;background:var(--paper)}
+.phone .screen img{width:100%;height:auto}
+.phone .island{position:absolute;top:calc(clamp(9px,2.6vw,13px) + 10px);left:50%;transform:translateX(-50%);width:26%;height:clamp(18px,5vw,26px);border-radius:99px;background:#05090f}
+.phone .zoom{position:absolute;right:18px;bottom:18px;font-size:12.5px;font-weight:600;background:rgba(10,28,51,.9);color:var(--on-navy);padding:10px 16px;border-radius:99px}
+.rail-head{margin:clamp(56px,8vw,96px) 0 20px}
+.rail-head h3{font-size:clamp(30px,4vw,46px);line-height:1}
+.rail-head p{margin-top:10px;font-size:14.5px;color:var(--mute)}
+.rail-wrap{position:relative}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--gutter) 22px;margin:0 calc(var(--gutter)*-1);scrollbar-width:thin;scrollbar-color:var(--navy) transparent;-webkit-overflow-scrolling:touch;scroll-padding-left:var(--gutter)}
+.rail::-webkit-scrollbar{height:6px}.rail::-webkit-scrollbar-thumb{background:var(--navy);border-radius:9px}
+.post{flex:0 0 clamp(236px,64vw,330px);scroll-snap-align:start;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--navy);cursor:zoom-in;padding:0;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.post:active{transform:scale(.98)}
+.post img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+@media (hover:hover) and (pointer:fine){.post:hover{transform:translateY(-6px);box-shadow:0 34px 60px -32px rgba(10,28,51,.65)}}
+.arrows{display:none;gap:10px;margin-top:6px}
+@media (hover:hover) and (pointer:fine){.arrows{display:flex}}
+.arrows button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--paper);cursor:pointer;font-size:20px;transition:background .2s var(--ease),color .2s var(--ease),transform .16s var(--ease)}
+.arrows button:hover{background:var(--navy);color:var(--on-navy)}
+.arrows button:active{transform:scale(.94)}
+
+/* material */
+.mat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,26px);align-items:start}
+.ph{margin:0;position:relative}
+.ph button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:var(--r);overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.ph button:active{transform:scale(.985)}
+.ph img{width:100%;height:auto}
+@media (hover:hover) and (pointer:fine){.ph button:hover{transform:translateY(-5px);box-shadow:0 32px 56px -30px rgba(10,28,51,.6)}}
+.ph figcaption{padding:12px 2px 0;font-size:14.5px;color:var(--mute)}
+.mat .ph:nth-child(3n+2){margin-top:clamp(0px,5vw,64px)}
+.mat .ph:nth-child(3n+3){margin-top:clamp(0px,2.4vw,28px)}
+
+/* cierre */
+.close{background:var(--cream);padding:clamp(56px,8vw,100px) 0 40px}
+.close-card{position:relative;border-radius:clamp(24px,4vw,40px);padding:clamp(30px,6vw,76px);background:radial-gradient(800px 420px at 100% 0%,var(--navy-3),transparent 62%),linear-gradient(150deg,var(--navy-2),var(--navy) 62%);color:var(--on-navy);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px)}
+.close-card h2{font-size:clamp(38px,5.4vw,70px);line-height:.98;text-wrap:balance}
+.close-card h2 em{font-style:italic;padding-bottom:.08em;display:inline-block}
+.close-card p.lead{margin-top:20px;color:var(--on-navy-dim);max-width:46ch;font-size:clamp(15.5px,1.6vw,18px)}
+.svc{display:grid;align-content:start}
+.svc div{padding:22px 0;border-top:1px solid rgba(246,242,234,.2);font-size:15.5px;color:var(--on-navy-dim);line-height:1.5}
+.svc div:last-child{border-bottom:1px solid rgba(246,242,234,.2)}
+.svc b{display:block;color:var(--on-navy);font-family:"Cormorant Garamond",serif;font-weight:600;font-size:28px;line-height:1.05;margin-bottom:6px}
+.sign{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:30px;border-top:1px solid rgba(246,242,234,.2)}
+.sign p{font-size:15px;color:var(--on-navy-dim)}
+.sign b{display:block;color:var(--on-navy);font-size:19px;font-weight:600}
+.contact{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.contact a{display:inline-flex;align-items:center;min-height:50px;padding:12px 24px;border-radius:99px;border:1px solid rgba(246,242,234,.4);font-weight:500;font-size:15px;text-decoration:none;overflow-wrap:anywhere;transition:background .2s var(--ease),color .2s var(--ease),transform .16s var(--ease)}
+.contact li:first-child a{background:var(--on-navy);color:var(--navy);border-color:var(--on-navy)}
+.contact a:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.contact a:hover{transform:translateY(-2px)}.contact li:not(:first-child) a:hover{background:rgba(246,242,234,.12)}}
+footer{padding:28px 0 52px;color:var(--mute);font-size:13.5px;display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+
+/* lightbox */
+dialog{border:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;color:var(--on-navy)}
+dialog::backdrop{background:rgba(5,12,24,.92);backdrop-filter:blur(6px)}
+dialog .box{height:100%;overflow:auto;display:flex;justify-content:center;padding:72px 12px 40px;-webkit-overflow-scrolling:touch}
+dialog img{width:min(620px,100%);height:auto;border-radius:var(--r);align-self:flex-start;background:var(--paper)}
+dialog .x,dialog .nav{position:fixed;z-index:2;border-radius:50%;border:1px solid rgba(246,242,234,.3);background:rgba(10,28,51,.9);color:var(--on-navy);cursor:pointer;display:grid;place-items:center}
+dialog .x{top:14px;right:14px;width:48px;height:48px;font-size:24px}
+dialog .nav{top:50%;width:48px;height:48px;font-size:22px;transform:translateY(-50%)}
+dialog .prev{left:12px}dialog .next{right:12px}
+dialog .x:active,dialog .nav:active{transform:translateY(-50%) scale(.94)}
+dialog .x:active{transform:scale(.94)}
+@media (max-width:760px){dialog .nav{top:auto;bottom:18px;transform:none}dialog .nav:active{transform:scale(.94)}}
+dialog .cap{position:fixed;left:0;right:0;bottom:22px;text-align:center;font-size:13px;color:var(--on-navy-dim);pointer-events:none}
+@media (max-width:760px){dialog .cap{bottom:34px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr}
+  .collage{max-width:520px;width:100%;margin-inline:auto;min-height:420px}
+  .stage{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .phone-col{order:-1}
+  .notes{gap:24px}.note{max-width:none}.notes.r .note{margin-left:0}
+  .now{grid-template-columns:1fr 1fr}
+  .fbcard{grid-column:1/-1}
+  .close-card{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .steps{display:none}
+  .brand img{height:48px}
+  .top .wrap{height:68px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){padding-left:0;border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .path{grid-template-columns:1fr}
+  .path a{display:flex;align-items:baseline;gap:14px}
+  .path span{margin:0}
+  .now{grid-template-columns:1fr}
+  .shot .win{max-width:340px}
+  .mat{grid-template-columns:1fr 1fr}
+  .mat .ph:nth-child(3n+2),.mat .ph:nth-child(3n+3){margin-top:0}
+  .sign{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:420px){.mat{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Las Olas Dentistry"><img src="img/logo.svg" alt="Logo de Las Olas Dentistry" data-t-alt="logoalt" width="193" height="56"></a>
+    <nav class="steps" aria-label="Recorrido" data-t-aria="navlabel">
+      <a href="#hoy"><b>01</b><span data-t="nav1">Hoy</span></a>
+      <a href="#propuesta"><b>02</b><span data-t="nav2">Propuesta</span></a>
+      <a href="#material"><b>03</b><span data-t="nav3">Material</span></a>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Idioma" data-t-aria="langlabel">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow rv" data-t="h_eyebrow">Propuesta de redes sociales</div>
+        <h1 class="serif rv" style="--d:.06s" data-t="h_title">Sus redes, a la altura de <em>su consultorio</em>.</h1>
+        <p class="lead rv" style="--d:.12s" data-t="h_lead">Una muestra de cómo podría verse el Instagram de Las Olas Dentistry, con sus fotos reales y su paleta.</p>
+        <p class="for rv" style="--d:.18s" data-t="h_for">Preparada para <b>Dr. David Escalante</b> · Fort Lauderdale, FL</p>
+        <div class="path rv" style="--d:.24s">
+          <a href="#hoy"><small>01</small><span data-t="p1">Cómo están hoy</span></a>
+          <a href="#propuesta"><small>02</small><span data-t="p2">Cómo podrían verse</span></a>
+          <a href="#material"><small>03</small><span data-t="p3">Material que ya tenemos</span></a>
+        </div>
+      </div>
+      <div class="collage rv" style="--d:.1s" aria-hidden="true">
+        <div class="arch"><img src="img/dr-david.webp" alt="" width="960" height="1200"></div>
+        <div class="disc"><img src="img/dr-johnny.webp" alt="" width="960" height="1200"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 HOY -->
+  <section class="blk" id="hoy">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow" data-t="s1_eyebrow">01 · Hoy</span>
+        <h2 class="serif" data-t="s1_title">Una base de marca ya cuidada</h2>
+        <p data-t="s1_p">Así se ven hoy su perfil y su grilla de Instagram, y los datos de sus perfiles públicos.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat rv"><b>155</b><span data-t="st1">seguidores en Instagram</span></div>
+        <div class="stat rv" style="--d:.06s"><b>19</b><span data-t="st2">publicaciones en Instagram</span></div>
+        <div class="stat rv" style="--d:.12s"><b>2026</b><span data-t="st3">nueva etapa del consultorio, con equipo y tecnología renovados</span></div>
+        <div class="stat rv" style="--d:.18s"><b>96</b><span data-t="st4">seguidores en Facebook</span></div>
+      </div>
+
+      <div class="now">
+        <figure class="shot rv">
+          <button type="button" class="win" data-zoom="img/hoy-ig-perfil.webp" data-g="hoy" data-t-zalt="z_perfil" data-alt="Captura del perfil de Instagram @lasolasdentistry"><img src="img/hoy-ig-perfil.webp" alt="Captura del perfil de Instagram @lasolasdentistry: 155 seguidores, bio Advanced Cosmetic and Implant Center" data-t-alt="a_perfil" width="375" height="812" loading="lazy"></button>
+          <figcaption><b data-t="c1_tag">Instagram · perfil</b><span data-t="c1_main">Una audiencia pequeña para un trabajo de este nivel</span><small data-t="c1_sub">155 seguidores · 19 publicaciones</small></figcaption>
+        </figure>
+        <figure class="shot rv" style="--d:.1s">
+          <button type="button" class="win" data-zoom="img/hoy-ig-grilla.webp" data-g="hoy" data-t-zalt="z_grilla" data-alt="Captura de la grilla de publicaciones de Instagram"><img src="img/hoy-ig-grilla.webp" alt="Captura de la grilla de Instagram con retratos de los doctores, fotos y reels" data-t-alt="a_grilla" width="375" height="690" loading="lazy"></button>
+          <figcaption><b data-t="c2_tag">Instagram · publicaciones</b><span data-t="c2_main">Diseños, fotos y reels conviven sin una línea visual común</span><small data-t="c2_sub">Buen material de partida para ordenar</small></figcaption>
+        </figure>
+        <aside class="fbcard rv" style="--d:.2s">
+          <div class="eyebrow" style="color:var(--on-navy-dim)" data-t="fb_tag">Facebook y Google</div>
+          <div class="num">96</div>
+          <h3 class="serif" data-t="fb_title">Facebook ya está activo</h3>
+          <p data-t="fb_p">Su página publicó hace pocos días. Mantendríamos Facebook al día con las mismas piezas de Instagram.</p>
+          <hr>
+          <p data-t="gg_p">En su perfil de Google, el consultorio cuenta su nueva etapa: equipo nuevo y tecnología más moderna. Sus redes pueden contar esa misma historia.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PROPUESTA -->
+  <section class="blk" id="propuesta">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow" data-t="s2_eyebrow">02 · Propuesta</span>
+        <h2 class="serif" data-t="s2_title">Así podría verse @lasolasdentistry</h2>
+        <p data-t="s2_p">Su logo, historias destacadas por tratamiento y una grilla con un solo lenguaje visual, en azul marino y blanco.</p>
+      </div>
+
+      <div class="stage">
+        <div class="notes l">
+          <div class="note rv"><h3 data-t="n1h">Perfil con su marca</h3><p data-t="n1p">Logo, especialidades, dirección y contacto a la vista.</p></div>
+          <div class="note rv" style="--d:.08s"><h3 data-t="n2h">Historias destacadas</h3><p data-t="n2p">Implantes, carillas, rehabilitación completa y tecnología, ordenadas por tratamiento.</p></div>
+          <div class="note rv" style="--d:.16s"><h3 data-t="n3h">Grilla coherente</h3><p data-t="n3p">Cada pieza con la misma tipografía y paleta, reconocible a primera vista.</p></div>
+        </div>
+
+        <div class="phone-col rv" style="--d:.1s">
+          <div class="phone" role="button" tabindex="0" data-zoom="img/feed.webp" data-g="prop" data-t-aria="z_feed_aria" aria-label="Ampliar el feed propuesto" data-t-zalt="z_feed" data-alt="Feed propuesto de Instagram de Las Olas Dentistry completo">
+            <div class="screen"><img src="img/feed.webp" alt="Feed propuesto de Instagram: perfil con logo, historias destacadas y grilla de seis publicaciones" data-t-alt="a_feed" width="1080" height="2053"></div>
+            <div class="island" aria-hidden="true"></div>
+            <div class="zoom" aria-hidden="true" data-t="tap">Tocar para ampliar</div>
+          </div>
+        </div>
+
+        <div class="notes r">
+          <div class="note rv"><h3 data-t="n4h">Mensajes que se entienden</h3><p data-t="n4p">Textos breves sobre cada tratamiento, con una invitación clara a pedir una consulta.</p></div>
+          <div class="note rv" style="--d:.08s"><h3 data-t="n5h">Fotos reales</h3><p data-t="n5p">Sus doctores, su equipo y su sala de tratamiento, sin fotos de banco de imágenes.</p></div>
+          <div class="note rv" style="--d:.16s"><h3 data-t="n6h">Facebook al día</h3><p data-t="n6p">Las mismas piezas en su página de Facebook, para llegar a quienes la siguen allí.</p></div>
+        </div>
+      </div>
+
+      <div class="rail-head rv">
+        <h3 class="serif" data-t="r_title">Seis publicaciones, de cerca</h3>
+        <p data-t="r_p">Deslice para ver más · toque para ampliar. Las piezas están en inglés, el idioma de su feed.</p>
+      </div>
+      <div class="rail-wrap">
+        <div class="rail rv" id="rail" aria-label="Publicaciones propuestas" data-t-aria="r_aria">
+          <button type="button" class="post" data-zoom="img/post1.webp" data-g="prop" data-alt="Publicación propuesta 1" data-t-zalt="z_p1"><img src="img/post1.webp" alt="Publicación 1: Meet Dr. David Escalante" width="900" height="1125" loading="lazy"></button>
+          <button type="button" class="post" data-zoom="img/post2.webp" data-g="prop" data-alt="Publicación propuesta 2" data-t-zalt="z_p2"><img src="img/post2.webp" alt="Publicación 2: Meet Dr. Johnny Moraes" width="900" height="1125" loading="lazy"></button>
+          <button type="button" class="post" data-zoom="img/post3.webp" data-g="prop" data-alt="Publicación propuesta 3" data-t-zalt="z_p3"><img src="img/post3.webp" alt="Publicación 3: Full Mouth Rehabilitation" width="900" height="1125" loading="lazy"></button>
+          <button type="button" class="post" data-zoom="img/post4.webp" data-g="prop" data-alt="Publicación propuesta 4" data-t-zalt="z_p4"><img src="img/post4.webp" alt="Publicación 4: Modern technology. Greater precision." width="900" height="1125" loading="lazy"></button>
+          <button type="button" class="post" data-zoom="img/post5.webp" data-g="prop" data-alt="Publicación propuesta 5" data-t-zalt="z_p5"><img src="img/post5.webp" alt="Publicación 5: Precision. Artistry. Confidence." width="900" height="1125" loading="lazy"></button>
+          <button type="button" class="post" data-zoom="img/post6.webp" data-g="prop" data-alt="Publicación propuesta 6" data-t-zalt="z_p6"><img src="img/post6.webp" alt="Publicación 6: Your new smile starts with one conversation." width="900" height="1125" loading="lazy"></button>
+        </div>
+        <div class="arrows">
+          <button type="button" id="rprev" aria-label="Anterior" data-t-aria="prev">&larr;</button>
+          <button type="button" id="rnext" aria-label="Siguiente" data-t-aria="next">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 MATERIAL -->
+  <section class="blk" id="material">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow" data-t="s3_eyebrow">03 · Material</span>
+        <h2 class="serif" data-t="s3_title">Su consultorio ya tiene mucho para mostrar</h2>
+        <p data-t="s3_p">Estas son fotos reales del sitio de Las Olas Dentistry que usaríamos para dar rostro y lugar a cada publicación.</p>
+      </div>
+      <div class="mat">
+        <figure class="ph rv"><button type="button" data-zoom="img/dr-david.webp" data-g="mat" data-alt="Dr. David Escalante"><img src="img/dr-david.webp" alt="Retrato del Dr. David Escalante" data-t-alt="m1a" width="960" height="1200" loading="lazy"></button><figcaption data-t="m1">Dr. David Escalante</figcaption></figure>
+        <figure class="ph rv" style="--d:.08s"><button type="button" data-zoom="img/dr-johnny.webp" data-g="mat" data-alt="Dr. Johnny Moraes"><img src="img/dr-johnny.webp" alt="Retrato del Dr. Johnny Moraes" data-t-alt="m2a" width="960" height="1200" loading="lazy"></button><figcaption data-t="m2">Dr. Johnny Moraes</figcaption></figure>
+        <figure class="ph rv" style="--d:.16s"><button type="button" data-zoom="img/sala.webp" data-g="mat" data-alt="Tecnología digital en consulta"><img src="img/sala.webp" alt="Doctor y asistente con un paciente, con el escaneo digital en pantalla" data-t-alt="m3a" width="816" height="1448" loading="lazy"></button><figcaption data-t="m3">Tecnología digital en consulta</figcaption></figure>
+        <figure class="ph rv"><button type="button" data-zoom="img/moraes-consulta.webp" data-g="mat" data-alt="Dr. Johnny Moraes en consulta"><img src="img/moraes-consulta.webp" alt="Dr. Johnny Moraes atendiendo a una paciente con lupas" data-t-alt="m4a" width="1040" height="1300" loading="lazy"></button><figcaption data-t="m4">Dr. Johnny Moraes en consulta</figcaption></figure>
+        <figure class="ph rv" style="--d:.08s"><button type="button" data-zoom="img/escalante-consulta.webp" data-g="mat" data-alt="Documentación fotográfica de una sonrisa"><img src="img/escalante-consulta.webp" alt="Doctor fotografiando la sonrisa de una paciente en la sala de tratamiento" data-t-alt="m5a" width="816" height="1448" loading="lazy"></button><figcaption data-t="m5">Fotografía clínica de sonrisas</figcaption></figure>
+        <figure class="ph rv" style="--d:.16s"><button type="button" data-zoom="img/escalante-procedimiento.webp" data-g="mat" data-alt="Sala de tratamiento"><img src="img/escalante-procedimiento.webp" alt="Doctor en la sala de tratamiento con paneles de madera y luz cálida" data-t-alt="m6a" width="816" height="1448" loading="lazy"></button><figcaption data-t="m6">Sala de tratamiento</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="close">
+    <div class="wrap">
+      <div class="close-card rv">
+        <div>
+          <h2 class="serif" data-t="k_title">Gestión mensual de sus redes, <em>para que usted se dedique a sus pacientes</em>.</h2>
+          <p class="lead" data-t="k_lead">Nos ocupamos de su Instagram y su Facebook: creamos el contenido, lo publicamos y mantenemos sus perfiles activos. Si más adelante lo desea, también podemos acompañarlo con su identidad visual.</p>
+        </div>
+        <div class="svc">
+          <div><b data-t="k1h">Instagram y Facebook</b><span data-t="k1p">Gestión de ambos perfiles, con su logo y su paleta.</span></div>
+          <div><b data-t="k2h">Contenido y Reels</b><span data-t="k2p">Publicaciones diseñadas y videos cortos con fotos reales de su consultorio.</span></div>
+          <div><b data-t="k3h">Todos los meses</b><span data-t="k3p">Perfiles activos y al día, sin que usted tenga que ocuparse.</span></div>
+        </div>
+        <div class="sign">
+          <p><b>Santiago Capelli · Ticca Mkt</b><span data-t="k_sign">Si le interesa, con gusto coordinamos una llamada breve.</span></p>
+          <ul class="contact">
+            <li><a href="https://ticca.agency" target="_blank" rel="noopener">ticca.agency</a></li>
+            <li><a href="mailto:capellisantiagoemp@gmail.com">capellisantiagoemp@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <footer>
+        <span data-t="f1">Propuesta preparada para Las Olas Dentistry · 800 E. Broward Blvd., Suite 305, Fort Lauderdale, FL 33301</span>
+        <span>Tel. (954) 859-1199</span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<dialog id="lb" aria-label="Imagen ampliada" data-t-aria="lb_aria">
+  <button type="button" class="x" id="lbx" aria-label="Cerrar" data-t-aria="close">&times;</button>
+  <button type="button" class="nav prev" id="lbp" aria-label="Anterior" data-t-aria="prev">&larr;</button>
+  <button type="button" class="nav next" id="lbn" aria-label="Siguiente" data-t-aria="next">&rarr;</button>
+  <div class="box" id="lbbox"><img id="lbimg" alt=""></div>
+  <div class="cap" id="lbcap"></div>
+</dialog>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- idioma ES / EN ---------- */
+  var T = { es:{}, en:{
+    logoalt:'Las Olas Dentistry logo', navlabel:'Overview', langlabel:'Language',
+    nav1:'Today', nav2:'Proposal', nav3:'Material',
+    h_eyebrow:'Social media proposal',
+    h_title:'Your social media, at the level of <em>your practice</em>.',
+    h_lead:'A sample of how the Las Olas Dentistry Instagram could look, using your real photos and your palette.',
+    h_for:'Prepared for <b>Dr. David Escalante</b> · Fort Lauderdale, FL',
+    p1:'Where you stand today', p2:'How it could look', p3:'Material we already have',
+    s1_eyebrow:'01 · Today', s1_title:'A brand foundation that is already carefully kept',
+    s1_p:'This is how your Instagram profile and grid look today, along with data from your public profiles.',
+    st1:'followers on Instagram', st2:'posts on Instagram', st3:'a new chapter for the practice, with a renewed team and technology', st4:'followers on Facebook',
+    a_perfil:'Screenshot of the Instagram profile @lasolasdentistry: 155 followers, bio Advanced Cosmetic and Implant Center',
+    a_grilla:'Screenshot of the Instagram grid with portraits of the doctors, photos and reels',
+    z_perfil:'Screenshot of the Instagram profile @lasolasdentistry', z_grilla:'Screenshot of the Instagram post grid',
+    c1_tag:'Instagram · profile', c1_main:'A small audience for work of this level', c1_sub:'155 followers · 19 posts',
+    c2_tag:'Instagram · posts', c2_main:'Designs, photos and reels sit together without a shared visual line', c2_sub:'Good starting material to put in order',
+    fb_tag:'Facebook and Google', fb_title:'Facebook is already active',
+    fb_p:'Your page posted a few days ago. We would keep Facebook up to date with the same pieces as Instagram.',
+    gg_p:'On its Google profile, the practice describes its new chapter: a new team and more modern technology. Your social media can tell that same story.',
+    s2_eyebrow:'02 · Proposal', s2_title:'How @lasolasdentistry could look',
+    s2_p:'Your logo, highlights by treatment and a grid with a single visual language, in navy and white.',
+    n1h:'A profile with your brand', n1p:'Logo, specialties, address and contact in plain view.',
+    n2h:'Highlights', n2p:'Implants, veneers, full mouth rehabilitation and technology, organized by treatment.',
+    n3h:'A coherent grid', n3p:'Every piece with the same typography and palette, recognizable at a glance.',
+    n4h:'Messages that land', n4p:'Short texts about each treatment, with a clear invitation to book a consultation.',
+    n5h:'Real photos', n5p:'Your doctors, your team and your treatment room, with no stock photography.',
+    n6h:'Facebook up to date', n6p:'The same pieces on your Facebook page, to reach the people who follow you there.',
+    a_feed:'Proposed Instagram feed: profile with logo, highlights and a grid of six posts',
+    z_feed:'Complete proposed Instagram feed for Las Olas Dentistry', z_feed_aria:'Enlarge the proposed feed', tap:'Tap to enlarge',
+    r_title:'Six posts, up close', r_p:'Swipe for more · tap to enlarge. The pieces are in English, the language of your feed.', r_aria:'Proposed posts',
+    z_p1:'Proposed post 1', z_p2:'Proposed post 2', z_p3:'Proposed post 3', z_p4:'Proposed post 4', z_p5:'Proposed post 5', z_p6:'Proposed post 6',
+    prev:'Previous', next:'Next', close:'Close', lb_aria:'Enlarged image',
+    s3_eyebrow:'03 · Material', s3_title:'Your practice already has plenty to show',
+    s3_p:'These are real photos from the Las Olas Dentistry website that we would use to give each post a face and a place.',
+    m1:'Dr. David Escalante', m1a:'Portrait of Dr. David Escalante',
+    m2:'Dr. Johnny Moraes', m2a:'Portrait of Dr. Johnny Moraes',
+    m3:'Digital technology in the operatory', m3a:'Doctor and assistant with a patient, with the digital scan on screen',
+    m4:'Dr. Johnny Moraes in consultation', m4a:'Dr. Johnny Moraes treating a patient with loupes',
+    m5:'Clinical smile photography', m5a:'Doctor photographing a patient\'s smile in the treatment room',
+    m6:'Treatment room', m6a:'Doctor in the treatment room with wood paneling and warm light',
+    k_title:'Monthly management of your social media, <em>so you can focus on your patients</em>.',
+    k_lead:'We take care of your Instagram and Facebook: we create the content, publish it and keep your profiles active. If you wish, later on we can also support you with your visual identity.',
+    k1h:'Instagram and Facebook', k1p:'Management of both profiles, with your logo and your palette.',
+    k2h:'Content and Reels', k2p:'Designed posts and short videos using real photos of your practice.',
+    k3h:'Every month', k3p:'Active, up-to-date profiles, with nothing for you to handle.',
+    k_sign:'If you are interested, we would be glad to set up a short call.',
+    f1:'Proposal prepared for Las Olas Dentistry · 800 E. Broward Blvd., Suite 305, Fort Lauderdale, FL 33301'
+  }};
+  var nodes = [], attrs = [];
+  document.querySelectorAll('[data-t]').forEach(function(el){ T.es[el.dataset.t] = el.innerHTML; nodes.push(el); });
+  [['data-t-alt','alt'],['data-t-aria','aria-label'],['data-t-zalt','data-alt']].forEach(function(p){
+    document.querySelectorAll('['+p[0]+']').forEach(function(el){ var k=el.getAttribute(p[0]); if(!(k in T.es)) T.es[k]=el.getAttribute(p[1]); attrs.push([el,p[0],p[1]]); });
+  });
+  T.es.title = document.title; T.en.title = 'Social media proposal | Las Olas Dentistry';
+  T.es.lbcap = 'Toque fuera de la imagen para cerrar'; T.en.lbcap = 'Tap outside the image to close';
+  var lang = 'es';
+  function setLang(l){
+    lang = l; document.documentElement.lang = l; document.title = T[l].title;
+    nodes.forEach(function(el){ var v=T[l][el.dataset.t]; if(v!=null) el.innerHTML=v; });
+    attrs.forEach(function(a){ var k=a[0].getAttribute(a[1]==='alt'?'data-t-alt':a[1]==='aria-label'?'data-t-aria':'data-t-zalt'); var v=T[l][k]; if(v!=null) a[0].setAttribute(a[1],v); });
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang===l ? 'true':'false'); });
+    try{ localStorage.setItem('lo-lang', l); }catch(e){}
+  }
+  /* attrs guarda [el, attrData, attrReal]: normalizo */
+  attrs = attrs.map(function(a){ return [a[0], a[2]]; });
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.lang); }); });
+  try{ var s = localStorage.getItem('lo-lang'); if(s==='en') setLang('en'); }catch(e){}
+
+  /* ---------- reveal ---------- */
+  var rv = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  /* ---------- nav activa ---------- */
+  var links = document.querySelectorAll('.steps a');
+  if('IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    ['hoy','propuesta','material'].forEach(function(id){so.observe(document.getElementById(id))});
+  }
+
+  /* ---------- carrusel ---------- */
+  var rail = document.getElementById('rail');
+  function step(d){ var p = rail.querySelector('.post'); rail.scrollBy({left:d*(p.offsetWidth+18), behavior: reduce?'auto':'smooth'}); }
+  document.getElementById('rprev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('rnext').addEventListener('click', function(){ step(1); });
+
+  /* ---------- lightbox ---------- */
+  var lb=document.getElementById('lb'), img=document.getElementById('lbimg'), box=document.getElementById('lbbox'), cap=document.getElementById('lbcap');
+  var group=[], idx=0;
+  function show(){ var el=group[idx]; img.src=el.dataset.zoom; img.alt=el.dataset.alt||''; box.scrollTop=0; cap.textContent = group.length>1 ? (idx+1)+' / '+group.length : ''; document.getElementById('lbp').hidden=document.getElementById('lbn').hidden = group.length<2; }
+  function open(el){ group=[].slice.call(document.querySelectorAll('[data-zoom][data-g="'+el.dataset.g+'"]')); idx=group.indexOf(el); show(); if(lb.showModal) lb.showModal(); else lb.setAttribute('open',''); }
+  function close(){ lb.close?lb.close():lb.removeAttribute('open'); }
+  function go(d){ if(group.length<2) return; idx=(idx+d+group.length)%group.length; show(); }
+  document.querySelectorAll('[data-zoom]').forEach(function(el){
+    el.addEventListener('click',function(){open(el)});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(el)}});
+  });
+  document.getElementById('lbx').addEventListener('click',close);
+  document.getElementById('lbp').addEventListener('click',function(){go(-1)});
+  document.getElementById('lbn').addEventListener('click',function(){go(1)});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target===box)close()});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+})();
+</script>
+</body>
+</html>
